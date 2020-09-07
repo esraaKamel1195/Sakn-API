@@ -2,7 +2,7 @@
   "name": "testmongoose",
   "version": "1.0.0",
   "description": "",
-  "main": "node",
+  "main": "app.js",
   "engines": {
     "node": "12.x",
     "npm": "6.x"
