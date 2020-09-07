@@ -43,10 +43,12 @@ let upload = multer({storage: storage});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+app.use(cors());
+app.options('*', cors());
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret,Authorization");
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
   });
