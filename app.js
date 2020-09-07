@@ -43,13 +43,14 @@ let upload = multer({storage: storage});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-  });
+app.use(cors({origin: "*"}));
+// app.use(function (req, res, next) {
+//     // res.setHeader('Access-Control-Allow-Origin', '*');
+//     // res.setHeader('Access-Control-Allow-Methods', 'POST');
+//     // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+//     // res.setHeader('Access-Control-Allow-Credentials', true);
+//     // next();
+//   });
    
   app.get('/api', function (req, res) {
     res.end('file catcher example');
