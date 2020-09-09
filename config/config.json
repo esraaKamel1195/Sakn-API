@@ -6,7 +6,7 @@
         "JWT_EXP": "1000m"
     },
     "production": {
-        "PORT": 4000,
+        "PORT": 5000,
         "MONGODB_URI": "mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/SaknyDataBase?retryWrites=true&w=majority",
         "JWT_SECRET": "SECRET#123",
         "JWT_EXP": "1000m"
