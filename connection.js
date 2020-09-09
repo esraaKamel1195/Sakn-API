@@ -5,7 +5,7 @@ class Connection {
 
         //Set up default mongoose connection
         
-        var mongoDatabaseUrl = process.env.MONGODB_URL ||"mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/EcommerceProject?retryWrites=true&w=majority" ||'mongodb://localhost:27017/SaknyDataBase';
+        var mongoDatabaseUrl = process.env.MONGODB_URL ||"mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/SaknyDataBase?retryWrites=true&w=majority" ||'mongodb://localhost:27017/SaknyDataBase';
         mongoose.connect(mongoDatabaseUrl, {
             useCreateIndex:true ,
             useNewUrlParser: true
