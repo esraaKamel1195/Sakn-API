@@ -1,13 +1,13 @@
 {
     "development": {
         "PORT": 3000,
-        "MONGODB_URI": "mongodb://localhost:27017/MyDatabase",
+        "MONGODB_URI": "mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/EcommerceProject?retryWrites=true&w=majority",
         "JWT_SECRET": "SECRET#123",
         "JWT_EXP": "1000m"
     },
     "production": {
         "PORT": 80,
-        "MONGODB_URI": "mongodb://xxxxx/DB_Name",
+        "MONGODB_URI": "mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/EcommerceProject?retryWrites=true&w=majority",
         "JWT_SECRET": "SECRET#123",
         "JWT_EXP": "1000m"
     }
