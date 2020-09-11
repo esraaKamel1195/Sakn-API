@@ -1,13 +1,13 @@
 {
     "development": {
         "PORT": 5000,
-        "MONGODB_URI": "mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/SaknyDataBase?retryWrites=true&w=majority",
+        "MONGODB_URL": "mongodb+srv://Esraa_kamel:esraakamel@cluster0.dxsk8.mongodb.net/SaknyDataBase?retryWrites=true&w=majority",
         "JWT_SECRET": "SECRET#123",
         "JWT_EXP": "1000m"
     },
     "production": {
         "PORT": 6000,
-        "MONGODB_URI": "mongodb+srv://xxxxx:xxxxx@cluster0.dxsk8.mongodb.net/xxxxx?retryWrites=true&w=majority",
+        "MONGODB_URL": "mongodb+srv://xxxxx:xxxxx@cluster0.dxsk8.mongodb.net/xxxxx?retryWrites=true&w=majority",
         "JWT_SECRET": "SECRET#123",
         "JWT_EXP": "1000m"
     }

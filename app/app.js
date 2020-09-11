@@ -45,8 +45,8 @@ let upload = multer({storage: storage});
 /////////////////////////////////////////////////
 app.use(cors());
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST,GET');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
@@ -1076,7 +1076,7 @@ app.post("/sendEmailToAdmin" , (req, res) => {
 /////////////////////////////////////////////////////////////////////////////////
 // var https = require('https');
 const PORT =process.env.PORT || 6000;
-app.listen(process.env.PORT, '0.0.0.0', () => console.log('server listening on port '+ PORT));
+app.listen(process.env.PORT, '0.0.0.0', () => console.log(app.listen()));
 // app.get('/', function(request, response) {
 //     var result = 'App is running'
 //     response.send(result);
