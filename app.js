@@ -44,13 +44,13 @@ let upload = multer({storage: storage});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 app.use(cors());
-app.options('*', cors());
-// app.use(function (req, res, next) {
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     res.setHeader('Access-Control-Allow-Methods', "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-//     res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret,Authorization");
-//     next();
-//   });
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+  });
    
   app.get('/api', function (req, res) {
     res.end('file catcher example');
@@ -76,6 +76,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(passport.initialize());
 //var Students = require('./students');
 //var student = new Students();
