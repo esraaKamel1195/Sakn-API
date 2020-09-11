@@ -1,16 +1,16 @@
-require('./config/config');
+require('../config/config');
 var express = require('express');
 var app = express();
 var cors = require('cors');
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var connection = require('./connection');
+var connection = require('../connection');
 var passport = require('passport');
 var localStrategy=require('passport-local').Strategy;
-var jwtHelper = require('./config/jwtHelper');
+var jwtHelper = require('../config/jwtHelper');
 var _ = require('lodash');
-var PASSPORTCONFIG=require('./config/passportConfig');
+var PASSPORTCONFIG=require('../config/passportConfig');
 var student=PASSPORTCONFIG.shareSameStudentObject();
 var owner=PASSPORTCONFIG.shareSameOwnerObject();
 var admin=PASSPORTCONFIG.shareSameAdminObject();
@@ -21,8 +21,8 @@ var nodemailer=require('nodemailer');
 //////////////////////////////////////////////////image////////////////////////////////////
 const path = require('path');
 const multer = require('multer');
-const DIR = './uploads';
-app.use(express.static('./uploads'));
+const DIR = '../uploads';
+app.use(express.static('../uploads'));
 
 //var TimeNowForImage="";
 var ImageValues="";
@@ -612,7 +612,7 @@ app.put("/updateOneOwnersWithPasswordWithImage/:ownerId", (req, res) => {
 /*------------------------------------------- End Class Owner ------------------------------*/
 
 /*------------------------------------------- Start Class Post ------------------------------*/
-var Posts = require('./post');
+var Posts = require('../post');
 var post = new Posts();
 
 app.get('/getAllPosts', (req, res) => {
