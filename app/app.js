@@ -1083,6 +1083,3 @@ app.get('/', function(request, response) {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
 
-http.createServer(onRequest).listen(process.env.PORT || 6000);
-
-
