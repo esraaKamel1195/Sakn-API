@@ -876,7 +876,7 @@ app.get("/getOwnerByPostID/:postID", (req, res) => {
 /*------------------------------------------- End Class post ------------------------------*/
 
 /*------------------------------------------- Start Class Order ------------------------------*/
-var Orders = require('./order');
+var Orders = require('../order');
 var order = new Orders();
 
 app.get('/getAllOrders', (req, res) => {
@@ -945,7 +945,7 @@ app.put("/updateOneOrders/:ordertId", (req, res) => {
 /*------------------------------------------- End Class Order ------------------------------*/
 
 /*------------------------------------------- Start Class Follow ------------------------------*/
-var Followers = require('./follow');
+var Followers = require('../follow');
 var followers = new Followers();
 
 app.get('/getAllFollowers', (req, res) => {
