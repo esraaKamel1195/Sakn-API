@@ -1074,12 +1074,14 @@ app.post("/sendEmailToAdmin" , (req, res) => {
 
 
 /////////////////////////////////////////////////////////////////////////////////
-const Port =process.env.PORT || 6000;
-app.listen( Port, () => console.log('server listening on port '+ Port));
-app.get('/', function(request, response) {
-    var result = 'App is running'
-    response.send(result);
-}).listen(app.get('port'), function() {
-    console.log('App is running, server is listening on port ', app.get('port'));
-});
+// var https = require('https');
+const PORT =process.env.PORT || 6000;
+app.listen(process.env.PORT, '0.0.0.0', () => console.log('server listening on port '+ PORT));
+// app.get('/', function(request, response) {
+//     var result = 'App is running'
+//     response.send(result);
+// }).listen(app.get(PORT), function() {
+//     console.log('App is running, server is listening on port ', PORT);
+// });
 
+// https.createServer({ ... }, app).listen(PORT);
