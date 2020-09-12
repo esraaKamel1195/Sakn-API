@@ -44,13 +44,14 @@ let upload = multer({storage: storage});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 app.use(cors());
+app.options('*', cors());
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST,GET');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.header("Access-Control-Allow-Headers",
+     "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret,Authorization");
     next();
-  });
+ });
    
   app.get('/api', function (req, res) {
     res.end('file catcher example');
@@ -1075,8 +1076,8 @@ app.post("/sendEmailToAdmin" , (req, res) => {
 
 /////////////////////////////////////////////////////////////////////////////////
 // var https = require('https');
-const PORT =process.env.PORT || 6000;
-app.listen(process.env.PORT, '0.0.0.0', () => console.log(app.listen()));
+const PORT =process.env.PORT || 5000;
+app.listen(process.env.PORT, () => console.log('done'));
 // app.get('/', function(request, response) {
 //     var result = 'App is running'
 //     response.send(result);
